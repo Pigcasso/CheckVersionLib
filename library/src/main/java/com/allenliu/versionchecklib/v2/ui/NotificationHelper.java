@@ -15,6 +15,7 @@ import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 
 import com.allenliu.versionchecklib.R;
+import com.allenliu.versionchecklib.core.Configuration;
 import com.allenliu.versionchecklib.core.PermissionDialogActivity;
 import com.allenliu.versionchecklib.core.VersionFileProvider;
 import com.allenliu.versionchecklib.utils.ALog;
@@ -53,7 +54,7 @@ public class NotificationHelper {
      */
     public void updateNotification(int progress) {
         if (versionBuilder.isShowNotification()) {
-            if ((progress - currentProgress) > 5 && !isDownloadSuccess && !isFailed) {
+            if ((progress - currentProgress) >= Configuration.PROGRESS_SLOP && !isDownloadSuccess && !isFailed) {
                 notificationBuilder.setContentIntent(null);
                 notificationBuilder.setContentText(String.format(contentText, progress));
                 notificationBuilder.setProgress(100, progress, false);

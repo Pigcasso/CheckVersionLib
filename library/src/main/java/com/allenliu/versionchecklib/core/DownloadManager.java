@@ -126,7 +126,7 @@ public class DownloadManager {
                 int currentProgress = progress;
 //                showLoadingDialog(currentProgress);
                 listener.onCheckerDownloading(currentProgress);
-                if (currentProgress - lastProgress >= 5) {
+                if (currentProgress - lastProgress >= Configuration.PROGRESS_SLOP) {
                     lastProgress = currentProgress;
                     if (versionParams.isShowNotification() && !isDownloadSuccess) {
                         finalBuilder.setContentIntent(null);
@@ -179,7 +179,7 @@ public class DownloadManager {
                 ALog.e("silent downloadProgress:" + progress + "");
                 int currentProgress = progress;
 //                showLoadingDialog(currentProgress);
-                if (currentProgress - lastProgress >= 5) {
+                if (currentProgress - lastProgress >= Configuration.PROGRESS_SLOP) {
                     lastProgress = currentProgress;
                 }
                 listener.onCheckerDownloading(currentProgress);
