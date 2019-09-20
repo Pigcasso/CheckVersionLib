@@ -3,7 +3,6 @@ package com.allenliu.versionchecklib.v2.builder;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.res.Resources;
 import android.support.annotation.NonNull;
 
 import com.allenliu.versionchecklib.callback.APKDownloadListener;
@@ -16,8 +15,6 @@ import com.allenliu.versionchecklib.v2.callback.CustomVersionDialogListener;
 import com.allenliu.versionchecklib.v2.callback.ForceUpdateListener;
 import com.allenliu.versionchecklib.v2.net.RequestVersionManager;
 import com.allenliu.versionchecklib.v2.ui.VersionService;
-
-import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by allenliu on 2018/1/12.

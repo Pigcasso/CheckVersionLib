@@ -2,10 +2,8 @@ package com.allenliu.versionchecklib.v2.ui;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -16,9 +14,6 @@ import com.allenliu.versionchecklib.core.http.AllenHttp;
 import com.allenliu.versionchecklib.utils.ALog;
 import com.allenliu.versionchecklib.v2.eventbus.AllenEventType;
 import com.allenliu.versionchecklib.v2.eventbus.CommonEvent;
-
-import okhttp3.Call;
-import okhttp3.Dispatcher;
 
 public class DownloadingActivity extends AllenBaseActivity implements DialogInterface.OnCancelListener {
     public static final String PROGRESS = "progress";
